@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+@import 'variables';
+@import 'breakpoints';
+
+body {
+      padding: 0;
+      box-sizing: border-box;
+      font-size: 1rem;
+      color: $pale-violet;
+      font-family: 'Rubik', sans-serif;
+
+      .transition {
+            background-image: linear-gradient(to bottom, $light-magenta, $light-violet);
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 500px;
+            width: 250px;
+            border-bottom-right-radius: 90%;
+            z-index: -10;
+
+            @include xl {
+                  border-bottom-left-radius: 225px;
+                  border-bottom-right-radius: 225px;
+                  width: 450px;
+                  height: 750px;
+            }
+      }
+
+      .transition-right {
+
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border-top-left-radius: 225px;
+            width: 225px;
+            height: 750px;
+            background-color: rgb(248, 244, 250);
+            z-index: -10;
+            display: none;
+
+            @include xl {
+                  display: block;
+            }
+
+      }
+
+      .phone-outline-container {
+            @include xl {
+                  margin-top: 75px;
+                  margin-left: 300px;
+
+            }
+      }
+
+      .container {
+            @include xl {
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+            }
+
+            .phone-outline {
+                  // display: none;
+                  margin-top: 1.2rem;
+                  margin-left: auto;
+                  margin-right: auto;
+                  margin-bottom: 1.2rem;
+                  // border: 9px solid white;
+                  outline: 9px solid white;
+                  font-size: 0.8rem;
+                  width: 300px;
+                  border-radius: 2rem;
+                  height: 600px;
+                  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+
+
+                  .banner {
+                        padding-left: 1.5rem;
+                        padding-right: 1rem;
+                        padding-bottom: 1rem;
+                        border-top-left-radius: 2rem;
+                        border-top-right-radius: 2rem;
+                        background-image: linear-gradient(to left, $light-magenta, $light-violet);
+
+                        .notch {
+                              background-color: white;
+                              height: 1.25rem;
+                              width: 150px;
+                              margin: 0 auto;
+                              border-bottom-left-radius: 1rem;
+                              border-bottom-right-radius: 1rem;
+                        }
+
+                        .banner-rest {
+                              display: grid;
+                              grid-template-columns: 1fr 1fr 14fr 1fr;
+                              align-items: center;
+                              column-gap: 10px;
+                              padding-top: 0.8rem;
+
+                              .name {
+                                    font-weight: 500;
+                                    color: white;
+                              }
+
+                              svg {
+                                    height: 1rem;
+                                    fill: $white;
+                              }
+
+                              img {
+                                    border-radius: 50%;
+                                    width: 2rem;
+                                    border: 1px white solid;
+                              }
+                        }
+                  }
+
+                  .phone-body {
+                        background-color: $light-grayish-violet;
+                        height: 485px;
+                        border-bottom-left-radius: 2rem;
+                        border-bottom-right-radius: 2rem;
+                        padding: 1rem;
+
+                        .chat {
+                              font-size: 0.7rem;
+                              max-width: 160px;
+                              border-radius: 0.5rem;
+                              margin-bottom: 0.9rem;
+                              padding: 0.5rem;
+                        }
+
+                        .left {
+                              color: $moderate-violet;
+                              background-color: rgb(236, 229, 243);
+                              width: fit-content;
+                        }
+
+                        .right {
+                              color: $desaturated-dark-violet;
+                              background-color: white;
+                              margin-left: auto;
+                              box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                              width: fit-content;
+                        }
+
+                        .price {
+                              background-image: linear-gradient(to right, $light-magenta, $light-violet);
+                              display: grid;
+                              width: 500px;
+                              padding: 0.75rem 1.5rem 0.75rem 0.75rem;
+                              grid-template-columns: 1fr 5fr 1fr;
+                              align-items: center;
+                              margin-bottom: 0.5rem;
+
+                              svg {
+                                    fill: $pale-violet;
+                                    height: .7rem;
+                              }
+
+                        }
+
+                        .dollar-value {
+                              color: white;
+                              font-weight: 700;
+                        }
+
+                        .chat-images {
+                              display: flex;
+                              justify-content: flex-end;
+                              margin-bottom: 1rem;
+
+                              img {
+                                    width: 2.5rem;
+                                    border-radius: 25%;
+                                    margin-left: 0.5rem;
+                              }
+                        }
+
+                        .chat-type-next {
+                              display: grid;
+                              grid-template-columns: 5fr 1fr;
+                              margin-top: 1rem;
+                              align-items: center;
+                              background-color: white;
+                              border-radius: 1rem;
+                              padding: 0.5rem;
+
+                              svg {
+                                    height: 1.5rem;
+                              }
+                        }
+                  }
+            }
+
+            .text {
+                  text-align: center;
+                  margin-left: auto;
+                  margin-right: auto;
+
+                  @include xl {
+                        text-align: left;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        height: 90vh;
+                  }
+
+                  .text-heading {
+                        margin-top: 2rem;
+                        font-weight: 500;
+                        color: $very-dark-desaturated-violet;
+                        font-size: 2rem;
+
+                        @include xl {
+                              margin-top: 0;
+                              margin-left: 2rem;
+                        }
+                  }
+
+                  .text-main {
+                        color: $dark-grayish-violet;
+                        font-weight: 400;
+                        margin: 2rem 4.7rem 0rem 4.7rem;
+                        line-height: 1.5;
+
+                        @include xl {
+                              margin-left: 2rem;
+                        }
+                  }
+            }
+      }
+}
